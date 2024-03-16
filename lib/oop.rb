@@ -1,4 +1,6 @@
 class Car
+    attr_accessor :make, :model, :color, :price, :mileage
+
     def initialize(make, model, color, price)
         @make = make
         @model = model
@@ -24,7 +26,7 @@ class Car
     end
 
     def travel(distance)
-        @mileage = distance
+        @mileage += distance
         puts "The #{@make} #{@model} is travelling #{@mileage} miles"
     end
 end
